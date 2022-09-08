@@ -21,6 +21,21 @@ a {
   }
   body {
     color: white;
-    background: black;
+    /* background: black; */
   }
+}
+
+
+@font-face {
+  font-family: "AngelaWhite";
+  src: url('../fonts/angela/Angella\ White.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+  
+@font-face {
+  font-family: "Noto";
+  src: url('../fonts/noto/NotoSerifDisplay-Light.ttf');
+  font-weight: bold;
+  font-style: normal;
 }
