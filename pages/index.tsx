@@ -2,6 +2,8 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import { Header, Address, Gifts, Rsvp, Footer } from "../src/components";
+import { ParallaxProvider } from "react-scroll-parallax";
+import ParallaxExample from '../src/parallax/original/components/ParallaxExample/ParallaxExample'
 import styles from "../styles/Home.module.css";
 
 const Home: NextPage = () => {
@@ -16,13 +18,19 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
-        <Header />
-        <Address />
-        <Gifts />
-        <Rsvp />
-      </main>
-      <Footer />
+      <ParallaxProvider>
+        <ParallaxExample />
+      </ParallaxProvider>
+
+      <ParallaxProvider>
+        <main className={styles.main}>
+          <Header />
+          <Address />
+          <Gifts />
+          <Rsvp />
+        </main>
+        <Footer />
+      </ParallaxProvider>
     </div>
   );
 };
