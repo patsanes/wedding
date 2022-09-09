@@ -66,9 +66,11 @@ const RenderStatus = (status: Status): React.ReactElement => {
 export const Map = () => {
   const center = { lat: -34.7893193, lng: -56.0795449 };
 
-  console.log(process.env.MAP_API_KEY);
   return (
-    <Wrapper apiKey={process.env.MAP_API_KEY!} render={RenderStatus}>
+    <Wrapper
+      apiKey="AIzaSyBzqr3LF_LGaekgyjh_N-sKxIoplIQMR5E"
+      render={RenderStatus}
+    >
       <MyMapComponent center={center} zoom={16}>
         <Marker position={center} label="Salon" />
         <Marker
