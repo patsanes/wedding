@@ -1,9 +1,10 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import Image from "next/image";
 import { Header, Address, Gifts, Rsvp, Footer } from "../src/components";
-import { ParallaxProvider } from "react-scroll-parallax";
-import ParallaxExample from '../src/parallax/original/components/ParallaxExample/ParallaxExample'
+import { IntroCopy } from "../src/components/IntroCopy/IntroCopy";
+import Overlap from "../src/components/Overlap/Overlap";
+import ShapeField from "../src/components/ShapeField/ShapeField";
+import TriangleGrid from "../src/components/TriangleGrid/TriangleGrid";
 import styles from "../styles/Home.module.css";
 
 const Home: NextPage = () => {
@@ -18,19 +19,16 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <ParallaxProvider>
-        <ParallaxExample />
-      </ParallaxProvider>
-
-      <ParallaxProvider>
-        <main className={styles.main}>
-          <Header />
-          <Address />
-          <Gifts />
-          <Rsvp />
-        </main>
-        <Footer />
-      </ParallaxProvider>
+      <main className={styles.main}>
+        <Header />
+        <Address />
+        <Overlap />
+        <ShapeField />
+        <TriangleGrid />
+        <Gifts />
+        <Rsvp />
+      </main>
+      <Footer />
     </div>
   );
 };
