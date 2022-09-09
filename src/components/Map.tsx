@@ -65,17 +65,18 @@ const RenderStatus = (status: Status): React.ReactElement => {
 
 export const Map = () => {
   const center = { lat: -34.7893193, lng: -56.0795449 };
-  const church = { lat: -34.7892886, lng: -56.0781287 };
-  const zoom = 15;
 
   return (
     <Wrapper
       apiKey="AIzaSyBzqr3LF_LGaekgyjh_N-sKxIoplIQMR5E"
       render={RenderStatus}
     >
-      <MyMapComponent center={center} zoom={zoom}>
+      <MyMapComponent center={center} zoom={16}>
         <Marker position={center} label="Salon" />
-        <Marker position={church} label="Iglesia" />
+        <Marker
+          position={{ lat: -34.7892886, lng: -56.0781287 }}
+          label="Iglesia"
+        />
       </MyMapComponent>
     </Wrapper>
   );
