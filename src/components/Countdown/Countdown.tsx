@@ -16,6 +16,7 @@ export const Countdown = () => {
         minuteTitle="Minutos"
         secondTitle="Segundos"
         hideYear
+        hideSecond
         onTimeUp={() => console.log("Time's up ⏳")}
         endAtZero
       />
