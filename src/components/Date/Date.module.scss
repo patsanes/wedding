@@ -1,0 +1,47 @@
+@import '../../../styles/variables.scss';
+
+.container {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    padding: 90px 0px;
+    background-color: $background;
+    justify-content: space-between;
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.subtitle {
+    color: $font;
+    font-family: 'AngelaWhite';
+    font-weight: 400;
+    font-size: 70px;
+    line-height: 96px;
+}
+
+
+.branchRight {
+    display: flex;
+    align-self: flex-end;
+}
+
+.branchLeft {
+    display: flex;
+    align-self: flex-start;
+}
+
+@media only screen and (max-width: $portraitPhoneScreen) {
+    .container {
+        flex-direction: column;
+        padding: 30px 0;
+    }
+
+    .subtitle {
+        font-size: 50px;
+    }
+}

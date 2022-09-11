@@ -6,7 +6,7 @@ import Names from "../../../public/main/names.svg";
 export const Header = () => {
   return (
     <>
-      <Names />
+      <Names className={styles.names} />
       <span className={styles.header}>Hola mundo</span>
       <Countdown />
     </>

@@ -8,6 +8,7 @@ import {
   Rsvp,
   Footer,
   Message,
+  Date,
 } from "../src/components";
 import { ParallaxProvider } from "react-scroll-parallax";
 // import ParallaxExample from '../src/parallax/original/components/ParallaxExample/ParallaxExample'
@@ -33,6 +34,7 @@ const Home: NextPage = () => {
         <main className={styles.main}>
           <Header />
           <Message />
+          <Date />
           <Address />
           <Gifts />
           <Rsvp />

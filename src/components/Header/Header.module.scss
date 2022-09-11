@@ -1,4 +1,12 @@
+@import '../../../styles/variables.scss';
+
 .header {
     font-family: "AngelaWhite";
     font-size: 25px;
+}
+
+@media only screen and (max-width: $portraitPhoneScreen) {
+    .names {
+        transform: scale(0.8)
+    }
 }
