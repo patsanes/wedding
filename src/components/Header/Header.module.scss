@@ -1,11 +1,49 @@
 @import '../../../styles/variables.scss';
 
+.container {
+    display: grid;
+}
+
 .header {
     font-family: "AngelaWhite";
     font-size: 25px;
 }
 
+.space {
+    height: 70px;
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.names {
+    position: relative;
+    top: 180px;
+}
+
+.itemTopRight {
+    grid-column: 3;
+    grid-row: 1;
+}
+
+.itemTopLeft {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.itemBottomRight {
+    grid-column: 3;
+    grid-row: 3;
+}
+
+.itemBottomLeft {
+    grid-column: 1;
+    grid-row: 3;
+}
+
+
 @media only screen and (max-width: $portraitPhoneScreen) {
+    .container {}
+
     .names {
         transform: scale(0.8)
     }
