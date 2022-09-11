@@ -5,6 +5,8 @@ import BranchTopLeft from "../../../public/main/header/branch-top-left.svg";
 import BranchTopRight from "../../../public/main/header/branch-top-right.svg";
 import BranchBottomLeft from "../../../public/main/header/branch-bottom-left.svg";
 import BranchBottomRight from "../../../public/main/header/branch-bottom-right.svg";
+import { Parallax } from "react-scroll-parallax";
+import { Countdown } from "../Countdown/Countdown";
 
 export const Header = () => {
   const { isMobile } = usePlatform();
@@ -21,6 +23,12 @@ export const Header = () => {
         <BranchBottomLeft className={styles.itemBottomLeft} />
       )}
       {!isMobile && <BranchBottomRight className={styles.itemBottomRight} />}
+
+      {/* <Parallax opacity={[0, 1]} translateY={["-50%", "20%"]} scale={[0.75, 1]}>
+        <CornerTopLeft />
+      </Parallax> */}
+
+      <Countdown />
     </div>
   );
 };
