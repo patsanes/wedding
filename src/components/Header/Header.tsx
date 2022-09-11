@@ -12,23 +12,24 @@ export const Header = () => {
   const { isMobile } = usePlatform();
 
   return (
-    <div className={styles.container}>
-      {!isMobile && <BranchTopLeft className={styles.itemTopLeft} />}
-      <BranchTopRight className={styles.itemTopRight} />
-      {!isMobile && <div className={styles.space} />}
-      <Names className={styles.names} />
-      {isMobile ? (
-        <BranchTopLeft className={styles.itemTopLeft} />
-      ) : (
-        <BranchBottomLeft className={styles.itemBottomLeft} />
-      )}
-      {!isMobile && <BranchBottomRight className={styles.itemBottomRight} />}
+    <>
+      <div className={styles.container}>
+        {!isMobile && <BranchTopLeft className={styles.itemTopLeft} />}
+        <BranchTopRight className={styles.itemTopRight} />
+        {!isMobile && <div className={styles.space} />}
+        <Names className={styles.names} />
+        {isMobile ? (
+          <BranchTopLeft className={styles.itemTopLeft} />
+        ) : (
+          <BranchBottomLeft className={styles.itemBottomLeft} />
+        )}
+        {!isMobile && <BranchBottomRight className={styles.itemBottomRight} />}
 
-      {/* <Parallax opacity={[0, 1]} translateY={["-50%", "20%"]} scale={[0.75, 1]}>
+        {/* <Parallax opacity={[0, 1]} translateY={["-50%", "20%"]} scale={[0.75, 1]}>
         <CornerTopLeft />
       </Parallax> */}
-
+      </div>
       <Countdown />
-    </div>
+    </>
   );
 };
