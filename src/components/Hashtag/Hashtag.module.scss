@@ -1,0 +1,58 @@
+// FIXME: wip svg responsive
+@import '../../../styles//variables.scss';
+
+.container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+    text-align: center;
+}
+
+.text {
+    font-family: 'Noto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 26px;
+    color: $font;
+}
+
+.link {
+    font-family: 'Noto';
+    font-weight: 300;
+    font-size: 52px;
+    color: $font;
+    font-style: normal;
+    line-height: 75px;
+}
+
+@media only screen and (max-width: $tabletScreen) {
+    .container {}
+
+    .content {}
+
+    .text {
+        font-size: 12px;
+        line-height: 26px;
+    }
+
+    .link {
+        font-size: 32px;
+        line-height: 46px;
+    }
+
+    .itemLeft {
+        transform: scale(0.8);
+    }
+
+    .itemRight {
+        transform: scale(0.8);
+    }
+}

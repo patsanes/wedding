@@ -37,7 +37,7 @@ export const useWindowSize = (): ScreenSize => {
 
 export const usePlatform = (): Response => {
   const DESKTOP_SCREEN = 1208;
-  const TABLET_SCREEN = 991;
+  const TABLET_SCREEN = 1057;
   const MOBILE_LARGE_SCREEN = 747;
   const PORTRAIT_SCREEN = 576;
   const size: ScreenSize = useWindowSize();

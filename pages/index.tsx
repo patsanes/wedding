@@ -13,6 +13,7 @@ import {
 import { ParallaxProvider } from "react-scroll-parallax";
 // import ParallaxExample from '../src/parallax/original/components/ParallaxExample/ParallaxExample'
 import styles from "../styles/Home.module.css";
+import { Hashtag } from "../src/components/Hashtag/Hashtag";
 
 const Home: NextPage = () => {
   return (
@@ -36,6 +37,7 @@ const Home: NextPage = () => {
           <Message />
           <Date />
           <Address />
+          <Hashtag />
           <Gifts />
           <Rsvp />
         </main>
