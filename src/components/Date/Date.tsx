@@ -1,9 +1,9 @@
 import React from "react";
+import { usePlatform } from "../../hooks/usePlatform";
 import DateSvg from "../../../public/main/date.svg";
 import BranchRight from "../../../public/main/date/branch-right.svg";
 import BranchLeft from "../../../public/main/date/branch-left.svg";
 import styles from "./Date.module.scss";
-import { isMobile } from "react-device-detect";
 
 const Content = () => {
   return (
@@ -13,7 +13,9 @@ const Content = () => {
     </>
   );
 };
+
 export const Date = () => {
+  const { isMobile } = usePlatform();
   if (isMobile) {
     return (
       <div className={styles.container}>

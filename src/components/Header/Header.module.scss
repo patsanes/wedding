@@ -40,11 +40,32 @@
     grid-row: 3;
 }
 
+.hide {
+    display: none;
+}
+
 
 @media only screen and (max-width: $portraitPhoneScreen) {
-    .container {}
+    .container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
 
     .names {
-        transform: scale(0.8)
+        display: flex;
+        align-self: center;
+        transform: scale(0.7);
+        top: 0;
+    }
+
+    .itemTopRight {
+        display: flex;
+        align-self: flex-end;
+    }
+
+    .itemBottomLeft {
+        display: flex;
+
     }
 }
