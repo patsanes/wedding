@@ -34,7 +34,6 @@ export const Header = () => {
       <Names />
       {/* </div> */}
 
-      <span className={styles.header}>Hola mundo</span>
       <Countdown />
     </>
   );
