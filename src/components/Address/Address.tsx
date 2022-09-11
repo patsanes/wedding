@@ -1,7 +1,12 @@
-import Image from "next/image";
-import styles from "./Address.module.scss";
+// import Image from "next/image";
+// import styles from "./Address.module.scss";
 import React from "react";
-import { Map } from "./Map";
+import { MapChurch, MapEvent } from "./Map";
 export const Address = () => {
-  return <Map></Map>;
+  return (
+    <>
+      <MapChurch></MapChurch>
+      <MapEvent></MapEvent>
+    </>
+  );
 };
