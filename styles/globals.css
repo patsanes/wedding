@@ -41,3 +41,9 @@ a {
   font-weight: bold;
   font-style: normal;
 }
+
+.flip-countdown-title {
+  color: #3a3b3c;
+  font-family: "AngelaWhite";
+  font-size: 50px !important;
+}
