@@ -18,15 +18,23 @@ import styles from "../styles/Home.module.css";
 import { Hashtag } from "../src/components/Hashtag/Hashtag";
 
 const Home: NextPage = () => {
+  const description =
+    "Te invitamos al casamiento de Gustavo Gard & Patricia Sanes";
   return (
     <div className={styles.container}>
       <Head>
-        <title>Wedding Gus & Pat</title>
-        <meta
-          name="description"
-          content="Wedding of Gustavo Gard & Patricia Sanes"
-        />
+        <title>Casamiento Gus & Pat</title>
+        <meta name="description" content={description} />
         <link rel="icon" href="/favicon.ico" />
+        <meta property="og:url" content="https://gusypat.com/" />
+        <meta property="og:title" content="lalal" />
+        <meta property="og:description" content={description} />
+        <meta
+          property="og:image"
+          itemProp="image"
+          content="https://gusypat.com/main/horizontal.png"
+        />
+        <meta property="og:type" content="website" />
       </Head>
 
       {/* <ParallaxProvider>
