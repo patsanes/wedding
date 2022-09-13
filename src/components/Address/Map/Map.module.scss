@@ -47,24 +47,36 @@
     padding: 0 0 0 10px;
 }
 
-.info {
-    width: 50%;
 
-    h1 {
-        font-family: 'Noto';
-        font-style: normal;
-        font-weight: 300;
-        font-size: 30px;
-        line-height: 41px;
-        color: $font;
+@media only screen and (max-width: $portraitPhoneScreen) {
+    .container {
+        padding: 50px 0px;
     }
 
-    h2 {
-        font-family: 'Noto';
-        font-style: normal;
-        font-weight: 300;
-        font-size: 25px;
-        line-height: 34px;
-        color: $font;
+    .content {
+        width: 90%;
+        border: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .header {
+        text-align: center;
+        margin-bottom: 20px;
+        border-bottom: 1px solid $font;
+    }
+
+    .bottom {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .text {
+        text-align: center;
+    }
+
+    .imageContainer {
+        padding: 0;
+        margin-bottom: 20px;
     }
 }
