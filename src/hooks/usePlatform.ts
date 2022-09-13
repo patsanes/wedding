@@ -1,11 +1,5 @@
 import { useEffect, useState } from "react";
 
-type Response = {
-  isMobile: boolean;
-  isTablet: boolean;
-  isDesktop: boolean;
-};
-
 type ScreenSize = {
   width?: number;
   height?: number;
@@ -35,7 +29,7 @@ export const useWindowSize = (): ScreenSize => {
   return windowSize;
 };
 
-export const usePlatform = (): Response => {
+export const usePlatform = () => {
   const DESKTOP_SCREEN = 1208;
   const TABLET_SCREEN = 1057;
   const MOBILE_LARGE_SCREEN = 747;
@@ -47,5 +41,7 @@ export const usePlatform = (): Response => {
     isMobile: widthScreen < PORTRAIT_SCREEN,
     isTablet: widthScreen < TABLET_SCREEN,
     isDesktop: widthScreen > DESKTOP_SCREEN,
+    // iphone SE
+    isMobileSmall: widthScreen < 375,
   };
 };
