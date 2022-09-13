@@ -14,8 +14,8 @@ export const useWindowSize = (): ScreenSize => {
   useEffect(() => {
     const handleResize = () => {
       setWindowSize({
-        width: window.innerWidth,
-        height: window.innerHeight,
+        width: document.documentElement.clientWidth,
+        height: document.documentElement.clientHeight,
       });
     };
     window.addEventListener("resize", handleResize);
@@ -41,7 +41,6 @@ export const usePlatform = () => {
     isMobile: widthScreen < PORTRAIT_SCREEN,
     isTablet: widthScreen < TABLET_SCREEN,
     isDesktop: widthScreen > DESKTOP_SCREEN,
-    // iphone SE
-    isMobileSmall: widthScreen < 375,
+    size,
   };
 };
