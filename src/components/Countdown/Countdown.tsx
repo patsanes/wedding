@@ -1,7 +1,9 @@
 import FlipCountdown from "@rumess/react-flip-countdown";
+import { usePlatform } from "../../hooks/usePlatform";
 import styles from "./Countdown.module.scss";
 
 export const Countdown = () => {
+  const { isMobile } = usePlatform();
   return (
     <div className={styles.container}>
       <FlipCountdown
@@ -15,10 +17,10 @@ export const Countdown = () => {
         hourTitle="Horas"
         minuteTitle="Minutos"
         secondTitle="Segundos"
-        hideYear
-        hideSecond
         onTimeUp={() => console.log("Time's up ⏳")}
         endAtZero
+        hideYear
+        size={isMobile ? "small" : "medium"}
       />
     </div>
   );

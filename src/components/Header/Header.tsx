@@ -5,8 +5,6 @@ import BranchTopLeft from "../../../public/main/header/branch-top-left.svg";
 import BranchTopRight from "../../../public/main/header/branch-top-right.svg";
 import BranchBottomLeft from "../../../public/main/header/branch-bottom-left.svg";
 import BranchBottomRight from "../../../public/main/header/branch-bottom-right.svg";
-import { Parallax } from "react-scroll-parallax";
-import { Countdown } from "../Countdown/Countdown";
 
 export const Header = () => {
   const { isTablet } = usePlatform();
@@ -29,7 +27,6 @@ export const Header = () => {
         <CornerTopLeft />
       </Parallax> */}
       </div>
-      <Countdown />
     </>
   );
 };

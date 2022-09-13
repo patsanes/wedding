@@ -1,5 +1,4 @@
 
-
 html,
 body {
   padding: 0;
@@ -45,9 +44,33 @@ a {
 .flip-countdown-title {
   color: #3a3b3c;
   font-family: "AngelaWhite";
-  font-size: 50px !important;
+  font-size: 40px !important;
 }
 
 .flip-countdown-card {
   font-family: "Noto";
+}
+
+@media only screen and (max-width: 900px) {
+  .flip-countdown {
+    display: flex !important;
+  }
+
+  .flip-countdown-piece {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+  }
+  .flip-countdown-title {
+    color: #3a3b3c;
+    font-size: 28px !important;
+  }
+  
+  .flip-countdown-card {
+    font-family: "Noto";
+  }
+
+  .flip-countdown.size-small .flip-countdown-piece {
+    margin: 0 1.15em !important;
+}
 }
