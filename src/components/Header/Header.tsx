@@ -1,31 +1,66 @@
 import styles from "./Header.module.scss";
+import { Parallax } from "react-scroll-parallax";
 import { usePlatform } from "../../hooks/usePlatform";
 import Names from "../../../public/main/header/names.svg";
+import NamesMobile from "../../../public/main/header/names-mobile.svg";
 import BranchTopLeft from "../../../public/main/header/branch-top-left.svg";
 import BranchTopRight from "../../../public/main/header/branch-top-right.svg";
 import BranchBottomLeft from "../../../public/main/header/branch-bottom-left.svg";
 import BranchBottomRight from "../../../public/main/header/branch-bottom-right.svg";
 
 export const Header = () => {
-  const { isTablet } = usePlatform();
+  const { isTablet, isMobile } = usePlatform();
 
   return (
     <>
       <div className={styles.container}>
-        {!isTablet && <BranchTopLeft className={styles.itemTopLeft} />}
-        <BranchTopRight className={styles.itemTopRight} />
-        {!isTablet && <div className={styles.space} />}
-        <Names className={styles.names} />
-        {isTablet ? (
-          <BranchTopLeft className={styles.itemTopLeft} />
-        ) : (
-          <BranchBottomLeft className={styles.itemBottomLeft} />
+        {!isTablet && (
+          <Parallax
+            opacity={[0.5, 1]}
+            translateX={undefined}
+            translateY={["0%", "20%"]}
+            scale={isTablet ? [1, 1] : [2, 1]}
+            className={styles.itemTopLeft}
+          >
+            <BranchTopLeft />
+          </Parallax>
         )}
-        {!isTablet && <BranchBottomRight className={styles.itemBottomRight} />}
 
-        {/* <Parallax opacity={[0, 1]} translateY={["-50%", "20%"]} scale={[0.75, 1]}>
-        <CornerTopLeft />
-      </Parallax> */}
+        <Parallax
+          opacity={[0.5, 1]}
+          translateY={["0%", "20%"]}
+          scale={isTablet ? [1, 1] : [2, 1]}
+          className={styles.itemTopRight}
+        >
+          <BranchTopRight />
+        </Parallax>
+        {!isTablet && <div className={styles.space} />}
+        <Parallax
+          opacity={[0.5, 1]}
+          translateY={["0%", "20%"]}
+          scale={isTablet ? [1, 1] : [2, 1]}
+          className={styles.names}
+        >
+          {isMobile ? <NamesMobile /> : <Names />}
+        </Parallax>
+        <Parallax
+          opacity={[0.5, 1]}
+          translateY={["0%", "20%"]}
+          scale={isTablet ? undefined : [2, 1]}
+          className={isTablet ? styles.itemTopLeft : styles.itemBottomLeft}
+        >
+          {isTablet ? <BranchTopLeft /> : <BranchBottomLeft />}
+        </Parallax>
+        {!isTablet && (
+          <Parallax
+            opacity={[0.5, 1]}
+            translateY={["0%", "20%"]}
+            scale={isTablet ? undefined : [2, 1]}
+            className={styles.itemBottomRight}
+          >
+            <BranchBottomRight />
+          </Parallax>
+        )}
       </div>
     </>
   );

@@ -10,6 +10,7 @@ import {
   Message,
   Date,
   Countdown,
+  Layout,
 } from "../src/components";
 import { ParallaxProvider } from "react-scroll-parallax";
 // import ParallaxExample from '../src/parallax/original/components/ParallaxExample/ParallaxExample'
@@ -33,7 +34,7 @@ const Home: NextPage = () => {
       </ParallaxProvider> */}
 
       <ParallaxProvider>
-        <main className={styles.main}>
+        <Layout>
           <Header />
           <Message />
           <Date />
@@ -42,7 +43,7 @@ const Home: NextPage = () => {
           <Gifts />
           <Rsvp />
           <Countdown />
-        </main>
+        </Layout>
         <Footer />
       </ParallaxProvider>
     </div>
