@@ -8,7 +8,7 @@ import styles from "./Date.module.scss";
 const Content = () => {
   return (
     <>
-      <DateSvg />
+      <DateSvg className={styles.icon} />
       <span className={styles.subtitle}>cena y fiesta toda la noche</span>
     </>
   );
