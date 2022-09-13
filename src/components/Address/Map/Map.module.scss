@@ -31,6 +31,7 @@
 .bottom {
   display: flex;
   flex-direction: column;
+
   :first-child {
     text-decoration: underline;
   }
@@ -60,6 +61,7 @@
     border: none;
     margin: 0;
     padding: 0;
+    min-width: auto;
   }
 
   .header {
