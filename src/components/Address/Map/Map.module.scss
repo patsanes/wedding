@@ -1,82 +1,84 @@
-@import '../../../../styles/variables.scss';
+@import "../../../../styles/variables.scss";
 
 .container {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    padding: 50px 10px;
-    justify-content: center;
-    min-width: 200px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  padding: 50px 10px;
+  justify-content: center;
+  min-width: 200px;
 }
 
 .content {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    border-right: 1px solid $font;
-    padding: 0 10px 0 0;
-    min-width: 367px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-right: 1px solid $font;
+  padding: 0 10px 0 0;
+  min-width: 367px;
 }
 
 .header {
-    font-family: 'Noto';
-    font-style: normal;
-    font-weight: 300;
-    font-size: 30px;
-    line-height: 41px;
-    color: $font;
-    text-align: right;
+  font-family: "Noto";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 30px;
+  line-height: 41px;
+  color: $font;
+  text-align: right;
 }
 
 .bottom {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  :first-child {
+    text-decoration: underline;
+  }
 }
 
 .text {
-    font-family: 'Noto';
-    font-style: normal;
-    font-weight: 300;
-    font-size: 25px;
-    line-height: 34px;
-    color: $font;
-    text-align: right;
+  font-family: "Noto";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 25px;
+  line-height: 34px;
+  color: $font;
+  text-align: right;
 }
 
 .imageContainer {
-    padding: 0 0 0 10px;
+  padding: 0 0 0 10px;
 }
 
-
 @media only screen and (max-width: $portraitPhoneScreen) {
-    .container {
-        padding: 50px 0px;
-    }
+  .container {
+    padding: 50px 0px;
+  }
 
-    .content {
-        width: 90%;
-        border: none;
-        margin: 0;
-        padding: 0;
-    }
+  .content {
+    width: 90%;
+    border: none;
+    margin: 0;
+    padding: 0;
+  }
 
-    .header {
-        text-align: center;
-        margin-bottom: 20px;
-        border-bottom: 1px solid $font;
-    }
+  .header {
+    text-align: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid $font;
+  }
 
-    .bottom {
-        display: flex;
-        flex-direction: column;
-    }
+  .bottom {
+    display: flex;
+    flex-direction: column;
+  }
 
-    .text {
-        text-align: center;
-    }
+  .text {
+    text-align: center;
+  }
 
-    .imageContainer {
-        padding: 0;
-        margin-bottom: 20px;
-    }
+  .imageContainer {
+    padding: 0;
+    margin-bottom: 20px;
+  }
 }
