@@ -9,21 +9,21 @@ import { Parallax } from "react-scroll-parallax";
 import { Countdown } from "../Countdown/Countdown";
 
 export const Header = () => {
-  const { isMobile } = usePlatform();
+  const { isTablet } = usePlatform();
 
   return (
     <>
       <div className={styles.container}>
-        {!isMobile && <BranchTopLeft className={styles.itemTopLeft} />}
+        {!isTablet && <BranchTopLeft className={styles.itemTopLeft} />}
         <BranchTopRight className={styles.itemTopRight} />
-        {!isMobile && <div className={styles.space} />}
+        {!isTablet && <div className={styles.space} />}
         <Names className={styles.names} />
-        {isMobile ? (
+        {isTablet ? (
           <BranchTopLeft className={styles.itemTopLeft} />
         ) : (
           <BranchBottomLeft className={styles.itemBottomLeft} />
         )}
-        {!isMobile && <BranchBottomRight className={styles.itemBottomRight} />}
+        {!isTablet && <BranchBottomRight className={styles.itemBottomRight} />}
 
         {/* <Parallax opacity={[0, 1]} translateY={["-50%", "20%"]} scale={[0.75, 1]}>
         <CornerTopLeft />
