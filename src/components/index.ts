@@ -8,3 +8,4 @@ export { Countdown as Countdown } from "./Countdown/Countdown";
 export { Message } from "./Message/Message";
 export { Date } from "./Date/Date";
 export { Layout } from "./Layout/Layout";
+export { Hashtag } from "./Hashtag/Hashtag";

@@ -12,16 +12,16 @@ import {
   Countdown,
   Layout,
   NavBar,
+  Hashtag,
 } from "../src/components";
 import { ParallaxProvider } from "react-scroll-parallax";
-// import ParallaxExample from '../src/parallax/original/components/ParallaxExample/ParallaxExample'
 import styles from "../styles/Home.module.css";
-import { Hashtag } from "../src/components/Hashtag/Hashtag";
 
 const Home: NextPage = () => {
   const title = "Casamiento Gus & Pat";
   const description =
     "Te invitamos al casamiento de Gustavo Gard & Patricia Sanes";
+
   return (
     <div className={styles.container}>
       <Head>
