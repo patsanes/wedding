@@ -1,38 +1,40 @@
+import Image from "next/image";
 import React from "react";
-import { usePlatform } from "../../hooks/usePlatform";
-import DateSvg from "../../../public/main/date.svg";
-import BranchRight from "../../../public/main/date/branch-right.svg";
-import BranchLeft from "../../../public/main/date/branch-left.svg";
 import styles from "./Date.module.scss";
 
 const Content = () => {
   return (
     <>
-      <DateSvg className={styles.icon} />
+      <div className={styles.dateContainer}>
+        <Image
+          src="/main/date/date.png"
+          width={361}
+          height={104}
+          layout="responsive"
+          alt="date"
+        />
+      </div>
       <span className={styles.subtitle}>cena y fiesta toda la noche</span>
     </>
   );
 };
 
 export const Date = () => {
-  const { isMobile } = usePlatform();
-  if (isMobile) {
-    return (
-      <div className={styles.container} id="date">
-        <BranchLeft className={styles.branchLeft} />
+  return (
+    <div className={styles.container} id="#hashtag">
+      <div className={styles.imageContainer}>
+        <Image
+          src="/main/hashtag/branches-mobile.png"
+          width={375}
+          height={175}
+          layout="responsive"
+          alt="branches"
+        />
+      </div>
+
+      <div className={styles.content}>
         <Content />
-        <BranchRight className={styles.branchRight} />
       </div>
-    );
-  } else {
-    return (
-      <div className={styles.container} id="#date">
-        <BranchLeft className={styles.branchLeft} />
-        <div className={styles.center}>
-          <Content />
-        </div>
-        <BranchRight className={styles.branchRight} />
-      </div>
-    );
-  }
+    </div>
+  );
 };

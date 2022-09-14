@@ -2,12 +2,6 @@ import styles from "./Hashtag.module.scss";
 import Link from "next/link";
 import Image from "next/image";
 import { usePlatform } from "../../hooks/usePlatform";
-// import Names from "../../../public/main/header/names.svg";
-import BranchLeft from "../../../public/main/hashtag/left.svg";
-import BranchRight from "../../../public/main/hashtag/right.svg";
-import BranchLeftMobile from "../../../public/main/hashtag/left-mobile.svg";
-import BranchRightMobile from "../../../public/main/hashtag/right-mobile.svg";
-import BranchesMobile from "../../../public/main/hashtag/hashtag-branches-mobile.svg";
 
 // FIXME: wip svg responsive
 export const Hashtag = () => {
