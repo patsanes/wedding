@@ -5,7 +5,7 @@ import styles from "./Countdown.module.scss";
 export const Countdown = () => {
   const { isMobile } = usePlatform();
   return (
-    <div className={styles.container}>
+    <div className={styles.container} id="#countdown">
       <FlipCountdown
         endAt={"2022-10-22T18:30:00-03:00"} // Date/Time
         theme="dark" // light

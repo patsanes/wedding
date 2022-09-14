@@ -18,7 +18,7 @@ export const Date = () => {
   const { isMobile } = usePlatform();
   if (isMobile) {
     return (
-      <div className={styles.container}>
+      <div className={styles.container} id="date">
         <BranchLeft className={styles.branchLeft} />
         <Content />
         <BranchRight className={styles.branchRight} />
@@ -26,7 +26,7 @@ export const Date = () => {
     );
   } else {
     return (
-      <div className={styles.container}>
+      <div className={styles.container} id="#date">
         <BranchLeft className={styles.branchLeft} />
         <div className={styles.center}>
           <Content />

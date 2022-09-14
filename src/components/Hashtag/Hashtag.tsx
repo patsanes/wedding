@@ -14,7 +14,7 @@ export const Hashtag = () => {
   const { isTablet } = usePlatform();
 
   return (
-    <div className={styles.container}>
+    <div className={styles.container} id="#hashtag">
       <div className={styles.imageContainer}>
         <Image
           src="/main/hashtag/branches-mobile.png"

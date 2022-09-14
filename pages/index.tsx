@@ -11,6 +11,7 @@ import {
   Date,
   Countdown,
   Layout,
+  NavBar,
 } from "../src/components";
 import { ParallaxProvider } from "react-scroll-parallax";
 // import ParallaxExample from '../src/parallax/original/components/ParallaxExample/ParallaxExample'
@@ -45,6 +46,7 @@ const Home: NextPage = () => {
       <ParallaxProvider>
         <Layout>
           <Header />
+          <NavBar />
           <Message />
           <Date />
           <Address />

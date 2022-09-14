@@ -4,7 +4,7 @@ import { usePlatform } from "../../hooks/usePlatform";
 export const Rsvp = () => {
   const { size, isMobile } = usePlatform();
   return (
-    <>
+    <div id="rsvp">
       <iframe
         src="https://docs.google.com/forms/d/e/1FAIpQLSc9jqGhoK4umgUtoKoVdYEBLqof6cqUy0yWJQnMSlGcI--c5Q/viewform?embedded=true"
         width={size.width}
@@ -16,6 +16,6 @@ export const Rsvp = () => {
       >
         Cargando formulario https://forms.gle/uKtwyJjqBaAFPRWZ9
       </iframe>
-    </>
+    </div>
   );
 };
