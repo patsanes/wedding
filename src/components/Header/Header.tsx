@@ -18,7 +18,7 @@ export const Header = () => {
           <Parallax
             opacity={[0.5, 1]}
             translateX={undefined}
-            translateY={["0%", "20%"]}
+            translateY={["20%", "0%"]}
             scale={isTablet ? [1, 1] : [2, 1]}
             className={styles.itemTopLeft}
           >
@@ -28,7 +28,7 @@ export const Header = () => {
 
         <Parallax
           opacity={[0.5, 1]}
-          translateY={["0%", "20%"]}
+          translateY={["20%", "0%"]}
           scale={isTablet ? [1, 1] : [2, 1]}
           className={styles.itemTopRight}
         >
@@ -37,7 +37,7 @@ export const Header = () => {
         {!isTablet && <div className={styles.space} />}
         <Parallax
           opacity={[0.5, 1]}
-          translateY={["0%", "20%"]}
+          translateY={["20%", "0%"]}
           scale={isTablet ? [1, 1] : [2, 1]}
           className={styles.names}
         >
@@ -45,7 +45,7 @@ export const Header = () => {
         </Parallax>
         <Parallax
           opacity={[0.5, 1]}
-          translateY={["0%", "20%"]}
+          translateY={["20%", "0%"]}
           scale={isTablet ? undefined : [2, 1]}
           className={isTablet ? styles.itemTopLeft : styles.itemBottomLeft}
         >
@@ -54,7 +54,7 @@ export const Header = () => {
         {!isTablet && (
           <Parallax
             opacity={[0.5, 1]}
-            translateY={["0%", "20%"]}
+            translateY={["20%", "0%"]}
             scale={isTablet ? undefined : [2, 1]}
             className={styles.itemBottomRight}
           >

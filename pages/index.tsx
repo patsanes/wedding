@@ -48,12 +48,12 @@ const Home: NextPage = () => {
           <Header />
           <NavBar />
           <Message />
+          <Countdown />
           <Date />
           <Address />
           <Hashtag />
           <Gifts />
           <Rsvp />
-          <Countdown />
         </Layout>
         <Footer />
       </ParallaxProvider>
