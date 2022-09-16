@@ -8,7 +8,7 @@ export const Rsvp = () => {
       <iframe
         src="https://docs.google.com/forms/d/e/1FAIpQLSc9jqGhoK4umgUtoKoVdYEBLqof6cqUy0yWJQnMSlGcI--c5Q/viewform?embedded=true"
         width={isTablet ? size.width : 640}
-        height={isMobile ? "2150" : "1800"}
+        height={isMobile ? 2150 : 1950}
         frameBorder={0}
         marginHeight={0}
         marginWidth={0}
