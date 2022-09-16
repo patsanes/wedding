@@ -11,15 +11,32 @@
     font-size: 25px;
 }
 
+.spaceTop {
+    width: 435px;
+    height: 435px;
+    grid-column: 2;
+    grid-row: 1;
+}
+
 .space {
-    height: 70px;
+    width: 435px;
+    height: 435px;
     grid-column: 2;
     grid-row: 2;
 }
 
+.space {
+    width: 435px;
+    height: 435px;
+    grid-column: 2;
+    grid-row: 3;
+}
+
 .names {
-    position: relative;
-    top: 180px;
+    grid-column: 2;
+    grid-row: 2;
+    // position: relative;
+    // top: 180px;
     justify-self: center;
 }
 
