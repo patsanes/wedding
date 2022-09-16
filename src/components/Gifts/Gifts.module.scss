@@ -52,3 +52,9 @@
     line-height: 24px;
     text-transform: uppercase;
 }
+
+@media only screen and (max-width: $portraitPhoneScreen) {
+    .container {
+        padding: 90px 10px;
+    }
+}
