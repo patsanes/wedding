@@ -51,8 +51,8 @@ const Home: NextPage = () => {
           <Countdown />
           <Date />
           <Address />
-          <Gifts />
           <Rsvp />
+          <Gifts />
           <Hashtag />
           <Footer />
         </Layout>

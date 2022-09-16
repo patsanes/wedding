@@ -1,0 +1,54 @@
+@import '../../../styles/variables.scss';
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 90px;
+
+    h1 {
+        font-family: 'AngelaWhite';
+        font-weight: 400;
+        font-size: 50px;
+        line-height: 68px;
+        color: $font;
+        text-align: center;
+        border-bottom: 1px solid $font;
+    }
+}
+
+.content {
+    display: flex;
+    justify-content: space-around;
+}
+
+.banks {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.bankAccountContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    border-bottom: 1px solid $font;
+    padding-bottom: 25px;
+
+    &:last-child {
+        border: none;
+    }
+
+    span {
+        font-size: 18px;
+        line-height: 24px;
+    }
+}
+
+.header {
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 24px;
+    text-transform: uppercase;
+}
