@@ -51,11 +51,11 @@ const Home: NextPage = () => {
           <Countdown />
           <Date />
           <Address />
-          <Hashtag />
           <Gifts />
           <Rsvp />
+          <Hashtag />
+          <Footer />
         </Layout>
-        <Footer />
       </ParallaxProvider>
     </div>
   );

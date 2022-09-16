@@ -31,7 +31,9 @@ export const Header = () => {
           scale={isTablet ? [1, 1] : [2, 1.5]}
           className={styles.names}
         >
-          {isMobile ? <NamesMobile /> : <Names />}
+          <div className={styles.namesContainer}>
+            {isMobile ? <NamesMobile /> : <Names />}
+          </div>
         </Parallax>
         {isTablet ? (
           <BranchBottomLeftMobile

@@ -4,9 +4,9 @@ import WhatsappIcon from "../../../public/main/icons/wp.svg";
 import styles from "./Footer.module.scss";
 
 const wpGusNumber = "+598 94 040 117";
-const wpPatNumber = "+598 98 557 755";
+const wpPatNumber = "+598 96 557 755";
 const wpGus = "https://wa.me/59894040117";
-const wpPat = "https://wa.me/59898557755";
+const wpPat = "https://wa.me/59896557755";
 
 export const Footer = () => {
   return (
@@ -23,7 +23,9 @@ export const Footer = () => {
         {/* Contact */}
         <div className={styles.contactContainer}>
           <h2>Contactanos</h2>
-          <span className={styles.subtitle}>Si tienes alguna duda no dudes en escribirnos!</span>
+          <span className={styles.subtitle}>
+            Si tienes alguna duda no dudes en escribirnos!
+          </span>
           <div className={styles.numbers}>
             <a
               className={styles.whatsapp}
