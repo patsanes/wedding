@@ -90,7 +90,7 @@ export const MapChurch = () => {
   const Church = isMobile ? PlaceMobile : PlaceDesktop;
   return (
     <Church
-      header="RELIGIOSO"
+      header="CEREMONIA"
       place="Iglesia San José de Manga"
       info="18:30 puntual"
       alt="church"
