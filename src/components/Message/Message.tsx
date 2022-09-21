@@ -6,8 +6,9 @@ export const Message = () => {
     <div className={styles.container} id="#message">
       <span className={styles.header}>¡Nos Casamos!</span>
       <span className={styles.subtitle}>
-        Esperamos que nos acompañen en este día tan especial
+        Después de tanta espera... finalmente es el día!
       </span>
+      <span className={styles.subtitle}>Esperamos puedas ser parte de él</span>
     </div>
   );
 };

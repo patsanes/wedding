@@ -52,8 +52,8 @@ const Home: NextPage = () => {
           <Date />
           <Address />
           <Rsvp />
-          <Gifts />
           <Hashtag />
+          <Gifts />
           <Footer />
         </Layout>
       </ParallaxProvider>

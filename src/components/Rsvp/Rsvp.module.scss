@@ -1,3 +1,34 @@
+@import '../../../styles/variables.scss';
+
 .container {
     margin: 100px;
+
+    h1 {
+        font-family: "AngelaWhite";
+        font-weight: 400;
+        font-size: 50px;
+        line-height: 68px;
+        color: $font;
+        text-align: center;
+    }
+
+}
+
+.frame {
+    display: flex;
+    justify-content: center;
+    margin: 50px 0;
+}
+
+@media only screen and (max-width: $portraitPhoneScreen) {
+    .message {
+        display: flex;
+        justify-content: center;
+
+        span {
+            width: calc(100% - 60px);
+            text-align: center;
+            color: $font;
+        }
+    }
 }

@@ -20,6 +20,7 @@
 .content {
     display: flex;
     justify-content: space-around;
+
 }
 
 .banks {
@@ -28,12 +29,21 @@
     gap: 20px;
 }
 
+.header {
+    font-weight: 500;
+    font-size: 42px;
+    line-height: 30px !important;
+    font-family: 'AngelaWhite';
+    margin: 10px 0;
+    align-self: center;
+    margin-bottom: 30px;
+}
+
 .bankAccountContainer {
     display: flex;
     flex-direction: column;
     gap: 10px;
     align-items: center;
-    border-bottom: 1px solid $font;
     padding-bottom: 25px;
 
     &:last-child {
@@ -46,15 +56,66 @@
     }
 }
 
-.header {
-    font-weight: 500;
-    font-size: 22px;
-    line-height: 24px;
-    text-transform: uppercase;
+.sameBank {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
 }
 
-@media only screen and (max-width: $portraitPhoneScreen) {
+.data {
+    h2 {
+        margin-bottom: 50px;
+        text-align: center;
+    }
+}
+
+.imageContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.account {
+    display: flex;
+    min-width: 450px;
+    justify-content: space-around;
+}
+
+
+@media only screen and (max-width: 847px) {
     .container {
         padding: 90px 10px;
+
+        h1 {
+            border: none;
+        }
+    }
+
+    .content {
+        flex-direction: column;
+    }
+
+    .banks {
+        gap: 0;
+    }
+
+    .data {
+        h2 {
+            padding-bottom: 10px !important;
+            border-bottom: 1px solid #3d3a3b;
+            margin-bottom: 30px;
+        }
+    }
+
+
+    .sameBank {
+        flex-direction: column;
+        padding: 10px 0 50px 0;
+        margin: 0;
+        border-radius: 4px;
+    }
+
+    .account {
+        min-width: fit-content;
+        flex-direction: column;
     }
 }

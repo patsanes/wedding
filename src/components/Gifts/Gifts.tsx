@@ -1,8 +1,10 @@
 import { FC } from "react";
+import Image from "next/image";
 import styles from "./Gifts.module.scss";
+import { usePlatform } from "../../hooks/usePlatform";
 
 type BankProps = {
-  bank: string;
+  bank?: string;
   account: string;
   branch?: string;
 };
@@ -10,7 +12,6 @@ type BankProps = {
 const Bank: FC<BankProps> = ({ bank, account, branch }) => {
   return (
     <div className={styles.bankAccountContainer}>
-      <span className={styles.header}>{bank}</span>
       {branch && <span>{branch}</span>}
       <span>{account}</span>
     </div>
@@ -18,40 +19,43 @@ const Bank: FC<BankProps> = ({ bank, account, branch }) => {
 };
 
 export const Gifts = () => {
+  const { isMobile } = usePlatform();
   return (
     <div id="gifts" className={styles.container}>
-      <h4 style={{ textAlign: "center" }}>WIP</h4>
       <h1>Lista de regalos</h1>
-
       <div className={styles.content}>
-        <div>
+        <div className={styles.data}>
           <h2>Cuentas bancarias</h2>
           <div className={styles.banks}>
-            <Bank
-              bank="Santander"
-              account="USD - 5202838326"
-              branch="Sucursal: 02"
-            />
-            <Bank
-              bank="Santander"
-              account="UYU - 1202682339"
-              branch="Sucursal: 02"
-            />
-            <Bank bank="BROU" account="UYU - 001150264-00001" />
-            <Bank bank="BROU" account="USD - 001150264-00002" />
+            <div className={styles.sameBank}>
+              <h3 className={styles.header}>Santander</h3>
+              <div className={styles.account}>
+                <Bank account="USD - 5202838326" branch="Sucursal: 02" />
+                <Bank account="UYU - 1202682339" branch="Sucursal: 02" />
+              </div>
+            </div>
+            <div className={styles.sameBank}>
+              <h3 className={styles.header}>Brou</h3>
+              <div className={styles.account}>
+                <Bank account="UYU - 001150264-00001" />
+                <Bank account="USD - 001150264-00002" />
+              </div>
+            </div>
           </div>
         </div>
-        {/* TODO: fill this shit */}
-        {/* <div>
+        <div className={styles.data}>
           <h2>
             Lista de regalos en <a>La Iberica</a>
           </h2>
+          <div className={styles.imageContainer}>
+            <Image
+              alt={"gifts"}
+              src={"/main/gifts/laiberica3.jpeg"}
+              width={isMobile ? 300 : 600}
+              height={isMobile ? 131.5 : 263}
+            />
+          </div>
         </div>
-        <div>
-          <h2>
-            Lista de regalos en <a>Masinfinito</a>
-          </h2>
-        </div> */}
       </div>
     </div>
   );
