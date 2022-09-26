@@ -20,6 +20,14 @@ const Bank: FC<BankProps> = ({ bank, account, branch }) => {
 
 export const Gifts = () => {
   const { isMobile } = usePlatform();
+
+  const redirectToStore = () => {
+    window.open(
+      "https://www.laiberica.com.uy/weddings/gard-ferronato-sanes-lezcano/public_list",
+      "_blank"
+    );
+  };
+
   return (
     <div id="gifts" className={styles.container}>
       <h1>Lista de regalos</h1>
@@ -47,7 +55,7 @@ export const Gifts = () => {
           <h2>
             Lista de regalos en <a>La Iberica</a>
           </h2>
-          <div className={styles.imageContainer}>
+          <div className={styles.imageContainer} onClick={redirectToStore}>
             <Image
               alt={"gifts"}
               src={"/main/gifts/laiberica3.jpeg"}
